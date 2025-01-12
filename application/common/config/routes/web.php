@@ -2,4 +2,6 @@
 
 use HttpSoft\Response\HtmlResponse;
 
-$this->route->get('/', fn() => 'Hello!');
+return [
+    'home'      => ['/', fn() => new HtmlResponse('It works!')],
+];

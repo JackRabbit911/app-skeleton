@@ -10,16 +10,11 @@ use HttpSoft\Emitter\SapiEmitter;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Log\LoggerInterface;
-// use Az\Route\RouteCollectionInterface;
-use Az\Route\RouteCollection;
-use Az\Route\Matcher;
-use Az\Route\RouteFactory;
 use Az\Route\Router;
 use Az\Route\RouterInterface;
 use Sys\Exception\SetErrorHandlerInterface;
 use Sys\Exception\WhoopsAdapter;
 use Sys\DefaultHandler;
-// use Sys\MiddlewareResolver;
 use Sys\Exception\ExceptionResponseFactory;
 use Pecee\Pixie\Connection;
 use Pecee\Pixie\QueryBuilder\QueryBuilderHandler;
@@ -37,8 +32,7 @@ use Sys\Profiler\Profiler;
 return [
     ServerRequestInterface::class => fn() => (new ServerRequestCreator())->create(),
     RequestHandlerInterface::class => fn(ExceptionResponseFactory $factory) => new DefaultHandler($factory),
-    RouterInterface::class => fn(ServerRequestInterface $request) => new RouteCollection($request),
-    // RouterInterface::class => fn(ContainerInterface $c) => new Router($c->get(Matcher::class), $c->get(RouteFactory::class)),
+    RouterInterface::class => fn() => new Router(CONFIG . 'routes/web.php'),
     MiddlewarePipelineInterface::class => fn() => new MiddlewarePipeline(),
     MiddlewareResolverInterface::class => fn(ContainerInterface $c) => new MiddlewareResolver($c),
     EmitterInterface::class => fn() => new SapiEmitter,

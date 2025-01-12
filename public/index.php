@@ -3,7 +3,8 @@
 $GLOBALS['_start'] = hrtime(true);
 $GLOBALS['_ram'] = memory_get_usage();
 
-// define('MAINFOLDER', basename(__DIR__) . '/');
+chdir(__DIR__);
+
 define('DOCROOT', './');
 define('ROOTPATH', '../../');
 define('SYSPATH', '../');
@@ -12,9 +13,6 @@ define('APPPATH', '../application/');
 define('STORAGE', '../storage/');
 define('CONFIG', APPPATH . 'common/config/');
 define('ENVPATH', '../');
-
-// var_dump(is_dir(APPPATH));
-// exit;
 
 require_once SYSPATH . 'vendor/autoload.php';
 require_once FRAMEWORK . 'autoload.php';

@@ -1,10 +1,12 @@
 #!/usr/bin/php
 <?php
 
-define ('FRAMEWORK', 'vendor/alpha-zeta/framework/src/');
-define('DOCROOT', '../htdocs/' . basename(__DIR__) .'/');
-define('ROOTPATH', '../');
-define('SYSPATH', '../system/');
+chdir(__DIR__);
+
+define('DOCROOT', './public');
+define ('FRAMEWORK', './vendor/alpha-zeta/framework/src/');
+define('ROOTPATH', './');
+define('SYSPATH', './');
 define('APPPATH', './application/');
 define('STORAGE', './storage/');
 define('CONFIG', APPPATH . 'common/config/');

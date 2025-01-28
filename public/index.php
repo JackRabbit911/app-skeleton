@@ -19,10 +19,6 @@ require_once FRAMEWORK . 'autoload.php';
 require_once FRAMEWORK . 'library.php';
 require_once CONFIG . 'bootstrap.php';
 
-date_default_timezone_set(env('APP_TZ'));
-
-$mode = getMode(CONFIG . 'mode.php');
-
-$container = (new Sys\ContainerFactory($mode))->create(new DI\ContainerBuilder());
+$container = (new Sys\ContainerFactory())->create(new DI\ContainerBuilder());
 $app = $container->get(Sys\App::class);
 $app->run();

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/favicon.ico?v=1.0" type="image/x-icon" />
+        <link href="/assets/output.css" rel="stylesheet">
+        <title>{{ title|default('Homepage') }}</title>
+    </head>
+    <body class="h-full">
+        <div class="mx-auto flex flex-col min-h-screen">
+            <main class="relative container mb-auto mx-auto">
+                {% block content %}
+                content
+                {% endblock %}
+            </main>           
+            <footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+                <aside>
+                    <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+                </aside>
+            </footer>
+        </div>
+    </body>
+</html>

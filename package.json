@@ -7,6 +7,7 @@
     "daisyui": "^5.0.0-beta.7"
   },
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i input.css -o output.css -m --cwd ./public/assets"
+    "dev": "npx @tailwindcss/cli -i input.css -o output.css -m --cwd ./public/assets",
+    "docs": "npx @tailwindcss/cli -i input.css -o output.css -m --cwd ./application/docs/assets"
   }
 }

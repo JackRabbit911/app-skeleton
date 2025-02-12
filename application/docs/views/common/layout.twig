@@ -12,7 +12,8 @@
             {{ include('@docs/common/navbar.twig') }}
             <div class="container grid grid-cols-4 gap-4 mb-auto mx-auto">
                 <aside class="bg-base-200">
-                    qqq
+                    {% block sidebar %}
+                    {% endblock %}
                 </aside>
                 <main class="col-span-3 bg-base-200">
                     {% block content %}

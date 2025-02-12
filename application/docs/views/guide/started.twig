@@ -1,4 +1,32 @@
 {% extends '@docs/common/layout.twig' %}
+{% block sidebar %}
+    <ul class="menu bg-base-200 rounded-box w-full">
+    {% for item in menu %}
+        <li>
+            {% if item.sub is defined %}
+                <details>
+                    <summary>
+                        {{ item.title }}
+                    </summary>
+                    <ul>
+                    {% for subitem in item.sub %}
+                        <li>
+                            <a href="{{ subitem.href ?? '' }}">
+                                {{ subitem.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </details>
+            {% else %}
+                <a href="{{ item.href ?? '' }}">
+                    {{ item.title }}
+                </a>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
 {% block content %}
     content
 {% endblock %}

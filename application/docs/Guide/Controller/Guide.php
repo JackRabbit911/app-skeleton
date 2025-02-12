@@ -9,9 +9,11 @@ class Guide extends WebController
 {
     protected string $tplPath = APPPATH . 'docs/views';
 
-    public function __invoke($folder, $file)
+    public function __invoke(Repo $repo, $folder, $file)
     {
-        return view('@docs/guide/started');
+        $data['menu'] = $repo->getSidebar();
+        
+        return view('@docs/guide/started', $data);
     }
 
     protected function _before()

@@ -1,0 +1,64 @@
+<h1 class="text-xl font-medium mb-2">Installation</h1>
+{% apply spaceless %}
+<p class="mt-2">1. Create your root project folder and go to it:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">mkdir {{ '<my_root_project_folder>'|escape }}</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">cd {{ '<my_root_project_folder>'|escape }}</code>
+    </pre>
+</div>
+<p class="mt-2">2. Use <code>`curl`</code> for download zip:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">curl -L https://api.github.com/repos/JackRabbit911/app-skeleton/zipball/master > skeleton.zip</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">unzip skeleton.zip</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">mv JackRabbit911-app-skeleton* site.zone</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">rm skeleton.zip</code>
+    </pre>
+</div>
+<p class="mt-2">Or use <code>`git clone`</code> for clone repository:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">git clone https://github.com/JackRabbit911/app-skeleton site.zone</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">rm -Rf site.zone/.git</code>
+    </pre>
+</div>
+<p class="mt-2">3. Go to site.zone folder:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">cd site.zone</code>
+    </pre>
+</div>
+<p class="mt-2">4. Run the install.sh:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">bash install.sh</code>
+    </pre>
+</div>
+<p class="mt-2">Or do the following manually:</p>
+<div class="mockup-code w-full">
+    <pre data-prefix="$">
+    <code class="nohighlight">mkdir -p -m=777 storage</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">mkdir -p -m=777 storage/logs storage/sessions storage/uploads storage/cache</code>
+    </pre>
+    <pre data-prefix="$">
+    <code class="nohighlight">cp .env.example .env</code>
+    <pre data-prefix="$">
+    <code class="nohighlight">composer require alpha-zeta/framework</code>
+    </pre>
+</div>    
+{% endapply %}
+<p class="mt-2">5. Edit your .env file:</p>
+<pre><code>{{ app.file('../.env.example') }}</code></pre>

@@ -5,17 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="/favicon.ico?v=1.0" type="image/x-icon" />
         <link href="/media/0/docs/assets/output.css" rel="stylesheet">
+        {# <link rel="stylesheet" href="/media/0/docs/assets/github-dark.min.css">
+        <script src="/media/0/docs/assets/highlight.min.js"></script> #}
+        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">
+        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
         <title>{{ title|default('Homepage') }}</title>
     </head>
     <body class="h-full">
-        <div class="mx-auto flex flex-col min-h-screen">
+        <div class="mx-auto flex flex-col min-h-screen z-10">
             {{ include('@docs/common/navbar.twig') }}
             <div class="container grid grid-cols-4 gap-4 mb-auto mx-auto">
                 <aside class="bg-base-200">
                     {% block sidebar %}
                     {% endblock %}
                 </aside>
-                <main class="col-span-3 bg-base-200">
+                <main class="col-span-3 bg-base-200 p-3 z-10">
                     {% block content %}
                     {% endblock %}
                 </main>
@@ -26,5 +30,6 @@
                 </aside>
             </footer>         
         </div>
+        <script>hljs.highlightAll();</script>
     </body>
 </html>

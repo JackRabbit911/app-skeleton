@@ -8,18 +8,20 @@ use Sys\Controller\WebController;
 class Guide extends WebController
 {
     protected string $tplPath = APPPATH . 'docs/views';
+    protected string $guidePath = APPPATH . 'docs/Guide/data';
 
-    public function __invoke(Repo $repo, $folder, $file)
+    public function __invoke(Repo $repo, $file = 'info.html')
     {
         $data['menu'] = $repo->getSidebar();
-        
+        $data['file'] = "@guide/$file";
+
         return view('@docs/guide/started', $data);
     }
 
     protected function _before()
     {
-        $this->tpl->getEngine()
-            ->getLoader()
-            ->addPath(realpath($this->tplPath), 'docs');
+        $this->tpl
+            ->addPath(realpath($this->tplPath), 'docs')
+            ->addPath(realpath($this->guidePath), 'guide');
     }
 }

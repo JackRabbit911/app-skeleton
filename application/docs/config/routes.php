@@ -5,5 +5,5 @@ use Sys\Controller\Media;
 
 return [
     'media' => ['/media/{lifetime}/{file}', [Media::class, 'process'], ['lifetime' => '\d*', 'file' => '.*']],
-    'guide' => ['/guide/{folder}/{file}', Guide::class, ['folder' => '[-\w]+', 'file' => '[-\.\w]+']],
+    'guide' => ['/guide/{file?}', Guide::class, ['file' => '.*']],
 ];

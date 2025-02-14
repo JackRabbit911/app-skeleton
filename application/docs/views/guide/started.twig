@@ -1,18 +1,9 @@
-{% extends '@docs/common/layout.twig' %}
+{% extends '@docs/guide/layout.twig' %}
 {% block sidebar %}
-{# <div class=""> #}
-    <div class="sticky top-21 z-40">
-        <h2 class="text-center font-medium text-xl text-indigo-800 mt-3">Alpha-zeta framework</h2>
-        <h3 class="text-center">
-            <a href="/guide" class="link text-center">UserGuide</a>
-
-        </h3>
-        <ul class="menu bg-base-200 rounded-box w-full overflow-y-auto">
-            {% import '@docs/common/menu.twig' as m %}
-            {{ m.menu(menu) }}
-        </ul>
-    </div>
-{# </div> #}
+    <ul class="menu w-full z-40">
+        {% import '@docs/common/menu.twig' as m %}
+        {{ m.menu(menu) }}
+    </ul>
 {% endblock %}
 {% block content %}
     {{ include(file) }}

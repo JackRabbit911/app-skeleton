@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/favicon.ico?v=1.0" type="image/x-icon" />
+        <link href="/media/0/docs/assets/output.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/github-dark.min.css">
+        <script src="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/highlight.min.js"></script>
+        <title>{{ title|default('Homepage') }}</title>
+    </head>
+    <body class="h-full">
+        <div class="drawer lg:drawer-open">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content lg:me-48">
+                <div class="mx-auto flex flex-col min-h-screen justify-between">
+                    <div>
+                        {{ include('@docs/common/navbar.twig') }}
+                        <main class="w-full pt-3 ps-3 pe-3 lg:pe-0">
+                            {% block content %}
+                            {% endblock %}
+                        </main>
+                    </div>
+                    <div class="ps-3 pe-3 lg:pe-0">
+                        <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+                            <aside>
+                                <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+                            </aside>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                <aside class="bg-base-200 text-base-content min-h-full w-80 lg:ms-48">
+                    <div class="navbar bg-base-100/90 sticky top-0 shadow-sm text-center z-50">
+                        <h2 class="text-2xl font-medium text-violet-800 w-full">
+                            <a href="/guide" class="link text-center">
+                                User guide
+                            </a>
+                        </h2>
+                    </div>
+                    {% block sidebar %}
+                    {% endblock %}
+                </aside>
+            </div>
+            {# </div> #}
+        </div>
+        <script>hljs.highlightAll();</script>
+    </body>
+</html>

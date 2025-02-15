@@ -2,6 +2,8 @@
 
 namespace Docs\Guide;
 
+use Sys\Helper\Facade\Text;
+
 class Repo
 {
     public function getSidebar()
@@ -24,7 +26,7 @@ class Repo
                 $menu[] = [
                     'title' => ucfirst($val),
                     'href' => path('guide', [
-                        'file' => strtolower(str_replace(' ', '-', $key . '/' . $val)) . '.html',
+                        'file' => Text::strToSlug($key . '/' . $val) . '.html',
                     ]),
                 ];
             }

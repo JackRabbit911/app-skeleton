@@ -1,23 +1,28 @@
 {% macro menu(menu) %}
     {% for item in menu %}
-    {% if app.request.is_active(item.href ?? '') %}
-        {% set active = ' class=menu-active' %}
-    {% else %}
-        {% set active = '' %}
-    {% endif %}
         <li>
             {% if item.sub is defined %}
-                <details>
+                {% if app.is_active(item.title, false) %}
+                    {% set open = ' open' %}
+                {% else %}
+                    {% set open = '' %}
+                {% endif %}
+                <details{{ open }}>
                     <summary>
-                        {{ item.title }}
+                        {{ __(item.title) }}
                     </summary>
                     <ul>
                         {{ _self.menu(item.sub) }}
                     </ul>
                 </details>
             {% else %}
-                <a{{ active }} href="{{ item.href ?? '' }}">
-                    {{ item.title }}
+                {% if app.is_active(item.href) %}
+                    {% set active = ' class=menu-active' %}
+                {% else %}
+                    {% set active = '' %}
+                {% endif %}
+                <a{{ active }} href="{{ item.href }}">
+                    {{ __(item.title) }}
                 </a>
             {% endif %}            
         </li>

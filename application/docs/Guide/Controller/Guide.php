@@ -12,6 +12,10 @@ class Guide extends WebController
 
     public function __invoke(Repo $repo, $file = 'info.html')
     {
+        if (!is_file($this->guidePath . '/' . $file)) {
+            abort();
+        }
+
         $data['menu'] = $repo->getSidebar();
         $data['file'] = "@guide/$file";
 

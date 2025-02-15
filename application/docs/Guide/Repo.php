@@ -23,7 +23,9 @@ class Repo
             } else {
                 $menu[] = [
                     'title' => ucfirst($val),
-                    'href' => '/guide' . strtolower(str_replace(' ', '-', $key . '/' . $val)) . '.html',
+                    'href' => path('guide', [
+                        'file' => strtolower(str_replace(' ', '-', $key . '/' . $val)) . '.html',
+                    ]),
                 ];
             }
         }

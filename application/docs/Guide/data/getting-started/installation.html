@@ -1,5 +1,4 @@
 <h1 class="text-xl font-medium mb-2">{{ __('Installation') }}</h1>
-{% apply spaceless %}
 <p class="mt-2">1. {{ __('create_root_folder') }}:</p>
 <div class="mockup-code w-full">
     <pre data-prefix="$">
@@ -59,6 +58,5 @@
     <code class="nohighlight">composer require alpha-zeta/framework</code>
     </pre>
 </div>    
-{% endapply %}
 <p class="mt-2">5. Edit your .env file:</p>
 <pre><code>{{ app.file('../.env.example') }}</code></pre>

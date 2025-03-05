@@ -4,6 +4,7 @@ namespace Docs\Guide\Controller;
 
 use Docs\Guide\Repo;
 use Sys\Controller\WebController;
+use APPPATH;
 
 class Guide extends WebController
 {

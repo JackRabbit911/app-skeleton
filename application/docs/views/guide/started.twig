@@ -1,0 +1,13 @@
+{% extends '@docs/guide/layout.twig' %}
+{% block sidebar %}
+    <ul class="menu w-full z-40">
+        {% import '@docs/common/menu.twig' as m %}
+        {{ m.menu(menu) }}
+    </ul>
+{% endblock %}
+{% block content %}
+    {{ include(file) }}
+{% endblock %}
+{% block right %}
+    Right block
+{% endblock %}

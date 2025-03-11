@@ -28,5 +28,5 @@ define('ROUTE_PATHS', [
     CONFIG . 'routes/' . MODE . '.php',
     APPPATH . 'docs/config/routes.php',
     // APPPATH . 'auth/config/routes.php',
-    CONFIG . 'routes/common.php',
+    // CONFIG . 'routes/common.php',
 ]); 

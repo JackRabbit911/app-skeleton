@@ -1,1 +1,2 @@
 create_root_folder: Create Your root project folder and go to it
+edit_bootstrap: If necessary, edit file application/common/config/bootstrap.php

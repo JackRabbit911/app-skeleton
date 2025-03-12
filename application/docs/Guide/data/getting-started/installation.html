@@ -21,7 +21,7 @@
     <code class="nohighlight">cd {{ '<my_root_project_folder>'|escape }}</code>
     </pre>
 </div>
-<p class="mt-2 mb-1">2. Use <code>`curl`</code> for download zip:</p>
+<p class="mt-2 mb-1">2. {{ __('Use `curl` for download zip') }}:</p>
 <div class="mockup-code w-full">
     <pre data-prefix="$">
     <code class="nohighlight">curl -L https://api.github.com/repos/JackRabbit911/app-skeleton/zipball/master > skeleton.zip</code>
@@ -36,7 +36,7 @@
     <code class="nohighlight">rm skeleton.zip</code>
     </pre>
 </div>
-<p class="mt-2 mb-1">Or use <code>`git clone`</code> for clone repository:</p>
+<p class="mt-2 mb-1">{{ __('Or use `git clone` for clone repository') }}:</p>
 <div class="mockup-code w-full">
     <pre data-prefix="$">
     <code class="nohighlight">git clone https://github.com/JackRabbit911/app-skeleton site.zone</code>
@@ -45,13 +45,13 @@
     <code class="nohighlight">rm -Rf site.zone/.git</code>
     </pre>
 </div>
-<p class="mt-2 mb-1">3. Go to site.zone folder:</p>
+<p class="mt-2 mb-1">3. {{ __('Go to site.zone folder') }}:</p>
 <div class="mockup-code w-full">
     <pre data-prefix="$">
     <code class="nohighlight">cd site.zone</code>
     </pre>
 </div>
-<p class="mt-2 mb-1">4. {{ __('Create writable directory "storage"') }}:</p>
+<p class="mt-2 mb-1">4. {{ __('Create writable directory') }} "storage":</p>
 <div class="mockup-code w-full">
     <pre data-prefix="$">
     <code class="nohighlight">mkdir -p -m=777 storage</code>
@@ -72,5 +72,3 @@
     <code class="nohighlight">composer require alpha-zeta/framework</code>
     </pre>
 </div> 
-{# <p class="mt-2">5. Edit your .env file:</p>
-<pre><code>{{ app.file('../.env.example') }}</code></pre> #}

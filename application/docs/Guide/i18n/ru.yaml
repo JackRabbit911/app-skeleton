@@ -1,2 +1,13 @@
 Installation: Установка
+The easiest way: Простейший вариант
+Manually: Вручную
+Settings: Настройки
+Use `curl` for download zip: Используйте `curl` для скачивания zip
+Or use `git clone` for clone repository: Или используйте `git clone` для клонирования репозитория
+Create writable directory: Создайте директорию с правами на запись
+Go to site.zone folder: Перейдите в папку site.zone
+Create .env file: Создайте .env файл
+Install framework: Установите фреймворк
+Enviroment: Окружение
 create_root_folder: Создайте корневую папку Вашего проекта и перейдите в неё
+edit_bootstrap: Если нужно, отредактируйте файл application/common/config/bootstrap.php

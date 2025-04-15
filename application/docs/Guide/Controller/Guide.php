@@ -19,6 +19,7 @@ class Guide extends WebController
 
         $data['menu'] = $repo->getSidebar();
         $data['file'] = "@guide/$file";
+        $data['title'] = $this->getTitle($file);
 
         return view('@docs/guide/started', $data);
     }
@@ -28,5 +29,11 @@ class Guide extends WebController
         $this->tpl
             ->addPath(realpath($this->tplPath), 'docs')
             ->addPath(realpath($this->guidePath), 'guide');
+    }
+
+    private function getTitle($file)
+    {
+        $filename = pathinfo($file)['filename'];
+        return ucfirst($filename);
     }
 }

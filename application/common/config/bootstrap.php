@@ -14,8 +14,6 @@ define('DISPLAY_ERRORS', (ENV >= TESTING) ? true : false);
 define('IS_DEBUG', false);
 define('IS_CACHE', false);
 
-define('STRICT_MODE', false);
-
 if (PHP_SAPI === 'cli') {
     define('MODE', 'cli');
 } elseif (strpos($_SERVER['REQUEST_URI'], '/api/') === 0) {
@@ -27,6 +25,4 @@ if (PHP_SAPI === 'cli') {
 define('ROUTE_PATHS', [
     CONFIG . 'routes/' . MODE . '.php',
     APPPATH . 'docs/config/routes.php',
-    // APPPATH . 'auth/config/routes.php',
-    // CONFIG . 'routes/common.php',
 ]); 

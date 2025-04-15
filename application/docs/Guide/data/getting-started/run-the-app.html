@@ -1,0 +1,27 @@
+<h1 class="text-xl font-medium mb-2">{{ __('Run the application') }}</h1>
+<ol class="list-decimal ms-4">
+    <li class="mb-3">
+        {{ __('If necessary, copy') }} 
+        <code class="nohighlight text-sm">
+            docker-compose.yml, Dockerfile, default.conf
+        </code>
+        {{ __('from this repo') }}:
+        <a href='https://github.com/JackRabbit911/Docker_php8.2' class="link">
+            https://github.com/JackRabbit911/Docker_php8.2
+        </a>
+        {{ __('to Your project root folder') }}
+    </li>
+    <li class="mb-3">
+        <div class="mockup-code w-full">
+            <pre data-prefix="$">
+            <code class="nohighlight">docker compose up -d</code>
+            </pre>
+        </div>
+    </li>
+    <li class="mb-3">
+        {{ __('Go to ') }} 
+        <a href='http://localhost' class="link">
+            http://localhost
+        </a>
+    </li>
+</ol>

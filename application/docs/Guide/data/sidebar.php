@@ -7,6 +7,7 @@ return [
             'enviroment',
             'config',
         ],
+        'Run the app',
     ],
     'Structure' => [
         'Namespaces',

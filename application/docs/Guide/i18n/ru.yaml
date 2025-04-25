@@ -11,3 +11,9 @@ Install framework: Установите фреймворк
 Enviroment: Окружение
 create_root_folder: Создайте корневую папку Вашего проекта и перейдите в неё
 edit_bootstrap: Если нужно, отредактируйте файл application/common/config/bootstrap.php
+Run the app: Запуск приложения
+Run the application: Запуск приложения
+If necessary, copy: При необходимости, скопируйте
+from this repo: Из этого репозитория
+to Your project root folder: в корневую папку Вашего проекта
+Go to: Перейдите на

@@ -10,6 +10,7 @@ return [
         'Run the app',
     ],
     'Structure' => [
+        'Filesystem',
         'Namespaces',
         'index.php & console',
     ],

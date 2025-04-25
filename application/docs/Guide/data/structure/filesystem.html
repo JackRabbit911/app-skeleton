@@ -1,0 +1,60 @@
+<h1 class="text-xl font-medium mb-2">{{ __('Structure. Filesystem') }}</h1>
+<p class="mt-2 mb-1">{{ __('filesystem') }}</p>
+<div class="tree">
+	root
+	<div class="ms-4 tree">
+		<span class="text-xl leading-0">├</span>
+		<em class="opacity-75"> docker container folders</em><br>
+		<span class="text-xl leading-0">└</span>
+		site.zone
+		<div class="ms-8 tree">
+			<span class="text-xl">├</span>
+			application
+			<div class="tree">
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				app<br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				auth<br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">└</span>
+				somemodule
+			</div>
+			<span class="text-xl leading-0">├</span>
+			public
+			<div class="tree">
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				assets<br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				<span class="ms-1 text-blue-900">index.php</span><br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">└</span>
+				<span class="ms-1 text-blue-900">.htaccess</span><br>
+			</div>
+			<span class="text-xl leading-0">├</span>
+			storage<br>
+			<div class="tree">
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				cache<br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">├</span>
+				logs<br>
+				<span class="text-xl ps-0.5 me-8 leading-0">│</span>
+				<span class="text-xl leading-0">└</span>
+				session
+			</div>
+			<span class="text-xl leading-0">├</span>
+			vendor<br>
+			<span class="text-xl leading-0">├</span>
+			<span class="ms-1 text-blue-900">.env</span><br>
+			<span class="text-xl leading-0">├</span>
+			<span class="ms-1 text-blue-900">console</span><br>
+			<span class="text-xl leading-0">└</span>
+			<em class="opacity-75"> composer.json, package.json, .gitignore, etc.</em>
+		</div>
+	</div>
+</div>
